@@ -1,0 +1,39 @@
+.copy
+    background: $color-dark-primary
+    padding: 24px 0
+
+    &__items
+        display: flex
+        justify-content: space-between
+        color: $color-white
+        align-items: center
+
+    &__item
+        display: flex
+
+        & a + a
+            margin-left: 4px
+
+        &_copyright
+            position: relative
+
+            & a
+                color: $color-white
+
+            &::after
+                content: url('../../static/clover-white.png')
+                position: absolute
+                padding-left: 2px
+                top: -1px
+
+        &_link
+            color: $color-white
+
+.copy
+    &__socialnetwork
+        &_link
+            &:hover .socialnetwork__fab
+                color: $color-white
+        &_fab
+            color: $color-dark-primary
+            background-color: $color-white

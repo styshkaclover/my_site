@@ -1,0 +1,380 @@
+// css reset
+
+@import "vars"
+
+*
+    margin: 0
+    padding: 0
+    border: 0
+
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+*:focus,
+*:active
+    outline: none
+
+html,
+body
+    height: 100%
+    width: 100%
+    font-size: 100%
+    font-size: 14px
+    line-height: 18px
+
+body
+    font-family: sans-serif
+    color: $color-text-primary
+    font-weight: 400
+
+h1, h2, h3, h4, h5, h6
+    font-size: inherit
+    font-weight: bold
+
+ul, ol
+    list-style: none
+    padding: 0
+
+a
+    color: $color-text-primary
+    transition: color 0.3s
+
+    &:hover
+        color: $color-primary
+
+a,
+a:visited
+    text-decoration: none
+
+a:hover
+    text-decoration: none
+
+a:focus,
+a:active
+    outline: none
+
+button,
+input,
+optgroup,
+select,
+textarea
+    font-family: inherit
+    font-size: 100%
+    margin: 0
+
+button,
+input
+    overflow: visible
+
+input::ms-clear
+    display: none
+
+summary,
+button
+    cursor: pointer
+
+button::-moz-focus-inner
+    border: 0
+    padding: 0
+
+input:focus
+    outline: none
+
+summary,
+details
+    display: block
+
+details > summary
+    list-style: none
+
+details > summary::-webkit-details-marker
+    display: none
+
+// for all pages
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+
+.body
+    flex-grow: 1
+    scroll-behavior: smooth
+    line-height: 1
+
+.container
+    max-width: $width-site
+    margin: 0 auto
+    padding: 0 3%
+
+.content
+    padding: 3% 2% 0
+
+.color-accent
+    color: $color-accent
+
+.color-dark-primary
+    color: $color-dark-primary
+
+.font-size
+    &_16
+        font-size: 16px
+        line-height: 20px
+    &_20
+        font-size: 20px
+        line-height: 24px
+    &_24
+        font-size: 24px
+        line-height: 28px
+
+.button
+    font-size: 16px
+    line-height: 19px
+    padding: 12px 25px
+    border: 1px solid $color-accent
+    background-color: transparent
+    color: $color-accent
+    text-transform: uppercase
+    transition: background-color 0.5s, color 0.5s, border 0.5s
+    display: inline-block
+
+    &:hover
+        background-color: $color-accent
+        color: $color-white
+
+.title
+    font-size: 28px
+    line-height: 32px
+    text-align: center
+
+.subtitle
+    padding: 20px 5px 5px 0
+    margin-bottom: 15px
+    border-bottom: 1px solid $color-dark-primary
+    display: inline-block
+
+.block
+    text-align: center
+    margin-top: 32px
+    padding: 0 5%
+.text
+    margin-top: 5px
+
+.socialnetwork
+
+    &__link
+
+        &:hover .socialnetwork__fab
+            background: $color-primary
+    &__fab
+        color: $color-white
+        background: $color-dark-primary
+        border-radius: 5px 10px
+        width: 31px
+        padding: 9px 0px
+        text-align: center
+        transition: color, background 0.4s
+
+#goToTop
+    position: fixed
+    z-index: 3
+    right: 5%
+    bottom: 10%
+    font-size: 26px
+    cursor: pointer
+    display: none
+
+    &:hover .goToTop__fab
+        opacity: 1
+
+.goToTop
+    &__fab
+        color: $color-dark-primary
+        font-size: 30px
+        padding: 9px
+        text-align: center
+        opacity: 0.7
+        transition: opacity 0.3s
+
+body._lock
+    overflow: hidden
+
+// header
+
+@import "header"
+
+// body
+
+.about
+    margin: 64px 0
+
+    &__block
+
+.education
+    padding: 64px 0 32px
+    background-color: #F8F3F4
+
+    &__items
+        display: flex
+        justify-content: space-between
+
+    &__item
+        margin-top: 22px
+        flex: 1
+
+        &:first-child
+            margin-right: 30px
+
+    &__grid
+        display: grid
+        grid-template-columns: 10% 90%
+        grid-gap: 2%
+        align-items: center
+
+    &__year-of-ending
+        color: $color-primary
+        font-weight: 600
+    &__block
+        margin: 10px 0 15px 30px
+
+.skills
+    padding: 64px 0 32px
+    background-color: $color-primary
+    color: $color-white
+
+    &__items
+        display: flex
+        justify-content: space-around
+        margin-top: 42px
+
+    &__text
+        white-space: nowrap
+
+    &__fab
+        color: $color-dark-primary
+        background: $color-white
+        border-radius: 10px 20px
+        font-size: 30px
+        width: 55px
+        padding: 15px 0
+        margin: 8px 30px 8px 0
+        text-align: center
+
+.certificates
+    margin: 64px 0 32px
+
+    &__items
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 183px 183px
+        grid-auto-flow: row
+        grid-gap: 2%
+        justify-content: space-between
+        justify-items: center
+        margin: 42px 0
+        align-items: center
+    &__link
+        &_big
+            grid-column: 1
+            grid-row: 1 / 3
+        &_small
+
+    &__link
+        display: block
+    &__img
+
+        max-width: 250px
+        object-fit: cover
+
+.portfolio
+    padding: 64px 0 32px
+    background-color: #F8F3F4
+
+    &__items
+        display: flex
+        justify-content: space-between
+        margin: 42px 20px 25px
+
+        & div + div
+            margin-left: 4%
+
+    &__item
+        max-width: 46%
+        &_block
+            & p
+                margin: 5px 20px 0 5px
+
+        &_img-link
+            display: block
+            border-radius: 3px 50px
+            margin: 10px
+
+        &_img
+            max-width: 100%
+            border-radius: 3px 50px
+            transition: box-shadow 0.3s
+            border: 1px solid #4caf4fb9
+
+            &:hover
+                border-radius: 3px 50px
+                box-shadow: $box-shw
+
+        &_subtitle
+
+        &_link
+            color: $color-dark-primary
+            font-weight: 550
+
+        &_text
+            font-size: 14px
+            color: $color-text-secondary
+
+        &_padding
+            padding-top: 15px
+
+.additional
+    padding: 64px 0 32px
+    background-color: $color-light-primary
+
+    &__items
+        margin-top: 42px
+
+    &__fab
+        display: block
+        color: $color-dark-primary
+        background: $color-white
+        border-radius: 10px 20px
+        font-size: 30px
+        width: 55px
+        padding: 15px 0
+        margin: 8px 30px 8px 0
+        text-align: center
+
+    &__subtitle
+        padding-top: 0
+        display: block
+        text-align: center
+
+.hobbies
+    background-color: $color-light-primary
+    padding: 20px
+    color: $color-dark-primary
+
+    &__items
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-gap: 2%
+        justify-items: center
+
+    &__text
+        max-width: 5%
+
+// body - only index.html
+
+// footer
+
+@import "footer"
+
+@import "media"
